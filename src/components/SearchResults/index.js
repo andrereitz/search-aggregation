@@ -1,0 +1,36 @@
+import { SearchResultsStyles } from './searchresults.styles';
+import { useEffect } from 'react';
+
+import { useSelector } from 'react-redux';
+
+import { selectSearchService, selectSearchResults, selectSearchQuery } from '../../store/Search/Search.selectors';
+
+export function SearchResults(){
+    const service = useSelector( selectSearchService );
+    const results = useSelector( selectSearchResults );
+    const query = useSelector( selectSearchQuery );
+
+    useEffect(() => {
+        console.log('results changed',results);
+
+    }, [results])
+
+    return(
+        <SearchResultsStyles>
+            { 
+                results.length > 0
+                    ?
+                        <div>
+                            <h2>Search results for: { query }</h2>
+                            <h3>Results from { service.title }</h3>
+                            {results.map( (result, index) => 
+                                <span>{result.title}: {index}</span>
+                            )}
+                        </div>
+                    :
+
+                        <div>Select a service and search</div>
+            }
+        </SearchResultsStyles>
+    )
+}
