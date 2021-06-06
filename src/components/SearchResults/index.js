@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 
 import { selectSearchService, selectSearchResults, selectSearchQuery } from '../../store/Search/Search.selectors';
 
+import { SearchResultsItem } from '../';
+
 export function SearchResults(){
     const service = useSelector( selectSearchService );
     const results = useSelector( selectSearchResults );
@@ -24,7 +26,7 @@ export function SearchResults(){
                             <h3>Results from { service.title }</h3>
                             <ul>
                                 {results.map( (result, index) => 
-                                    <li>{result.title}: {index}</li>
+                                    <SearchResultsItem key={`rs-${index}`} result={result} />
                                 )}
                             </ul>
                         </div>

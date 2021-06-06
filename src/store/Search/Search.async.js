@@ -43,7 +43,6 @@ export const fetchResults = (query) => async (dispatch, getState) => {
             payload.results = await fetch(__contructURL(service.url, query), headers)
                 .then(res => res.json())
                 .then(res => {
-                    console.log(res);
                     if(res.status === 'success'){
                         payload.results = __processResponse(res);
 

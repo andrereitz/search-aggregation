@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchResultsStyles = styled.div`
-    background: #F5F5F5;
+    background: #FAFAFA;
     text-align: center;
 
     > div{
@@ -11,5 +11,20 @@ export const SearchResultsStyles = styled.div`
         box-sizing: border-box;
         padding: 25px 15px;
         display: inline-block;
+
+        h2{
+            color: #252525;
+            margin: 0 0 10px 0;
+        }
+
+        h3{
+            margin: 0 0 25px 0;
+            color: #454545;
+        }
+
+        ul{
+            margin:0;
+            padding: 0;
+        }
     }
 `;

@@ -21,8 +21,8 @@ export function SearchBar(props){
 
     function handleSearch(){
         const query = queryRef.current.value;
-        console.log('the query', query)
-        if(!query) return setError({ msg: 'Please inform a search term' })
+        if(!query) return setError({ msg: 'Please inform a search term' });
+        if(searchLoading) return;
 
         dispatch(setLoading(true))
         dispatch(fetchResults(query))
