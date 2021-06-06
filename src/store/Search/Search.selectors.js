@@ -9,3 +9,7 @@ export const selectSearchResults = (state) => {
 export const selectSearchQuery = (state) => {
     return state.search.query;
 }
+
+export const selectSearchLoading = (state) => {
+    return state.search.loading;
+}

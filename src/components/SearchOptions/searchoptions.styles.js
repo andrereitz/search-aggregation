@@ -38,9 +38,11 @@ export const SearchOptionsStyles = styled.div`
         }
     }
 
-    ${props => !props.active}{
+    ${props => props.active && `{
         ul{
             display: block;
+            z-index: 1;
+            position: relative;
         }
-    }
+    }`}
 `;

@@ -11,3 +11,10 @@ export function updateResults(results){
         payload: results
     }
 }
+
+export function setLoading(loading){
+    return{
+        type: 'SET_LOADING',
+        payload: loading
+    }
+}

@@ -17,6 +17,7 @@ export const SearchBarStyles = styled.div`
         border: 1px solid #909090;
         border-radius: 1000px;
         background: #FFF;
+        position: relative;
 
         input{
             border: none;
@@ -40,16 +41,24 @@ export const SearchBarStyles = styled.div`
             border: none;
             color: #FFF;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        > span{
+            width: 100%;
+            max-width: 950px;
+            display: inline-block;
+            text-align: left;
+            font-size: 14px;
+            padding: 10px 0 0 0;
+            color: red;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            z-index: 0;
         }
     }
 
-    > span{
-        width: 100%;
-        max-width: 650px;
-        display: inline-block;
-        text-align: left;
-        font-size: 14px;
-        padding: 10px 0 0 25px;
-        color: red;
-    }
 `;
