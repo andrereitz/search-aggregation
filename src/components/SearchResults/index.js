@@ -1,5 +1,4 @@
 import { SearchResultsStyles } from './searchresults.styles';
-import { useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
 
@@ -11,10 +10,6 @@ export function SearchResults(){
     const service = useSelector( selectSearchService );
     const results = useSelector( selectSearchResults );
     const query = useSelector( selectSearchQuery );
-
-    useEffect(() => {
-        console.log('results changed',results);
-    }, [results])
 
     return(
         <SearchResultsStyles>

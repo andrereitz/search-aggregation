@@ -1,9 +1,7 @@
 import { SearchResultsItemStyles } from './searchresultsitem.styles';
 
 export function SearchResultsItem(props){
-    const { children, result } = props;
-
-    console.log('result', result);
+    const { result } = props;
 
     return(
         <SearchResultsItemStyles>
