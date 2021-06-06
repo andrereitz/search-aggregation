@@ -6,7 +6,7 @@ This is a test project for search agreggation from Bing and Google.
 
 This project is using "[SERPHouse](https://www.serphouse.com)" to serve the data. 
 Since the account is a trial account there is a limit to resquests that can be made, and a time limit to use the API.
-If the API is not available you can either create a free trial account and replace .env key with your own, or change the async operations to use the mock in `src\store\Search\Search.async.js`
+If the API is not available you can either create a free trial account and replace the key inside `.env` file with your own, or change the async operations to use the mock in `src\store\Search\Search.async.js`. The mock simulates a search with the query "test".
 
 ## Available Scripts
 

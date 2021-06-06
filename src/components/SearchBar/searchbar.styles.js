@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const SearchBarStyles = styled.div`
+export const SearchBarStyles = styled.div.attrs(props => ({
+    'data-testid': 'searchBar'
+}))`
     width: 100%;
     display: inline-block;
     text-align: center;

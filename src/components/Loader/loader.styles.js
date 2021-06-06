@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const LoaderStyles = styled.div`
+export const LoaderStyles = styled.div.attrs(props => ({
+    'data-testid': 'loader'
+}))`
     width: ${props => props.size ?? '30px'};
     height: ${props => props.size ?? '30px'};
     display: block;

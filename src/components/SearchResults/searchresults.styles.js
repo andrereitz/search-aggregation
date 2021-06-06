@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const SearchResultsStyles = styled.div`
+export const SearchResultsStyles = styled.div.attrs( props => ({
+    'data-testid': 'searchResults'
+}))`
     background: #FAFAFA;
     text-align: center;
 

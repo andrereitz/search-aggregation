@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const SearchResultsItemStyles = styled.li`
+export const SearchResultsItemStyles = styled.li.attrs( props => ({
+    'data-testid': 'searchResultsItem'
+}))`
     list-style: none;
     margin: 15px 0;
 
