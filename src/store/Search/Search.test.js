@@ -1,4 +1,4 @@
-import { BingMock, GoogleMock }  from '../../mocks';
+import { GoogleMock }  from '../../mocks';
 import * as actions from './Search.actions';
 
 const process = jest.fn(() => {

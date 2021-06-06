@@ -4,7 +4,9 @@ const LOCAL = {
     height: '35px'
 }
 
-export const SearchOptionsStyles = styled.div`
+export const SearchOptionsStyles = styled.div.attrs(props => ({
+    'data-testid': 'searchOptions'
+}))`
     font-size: 12px;
     position: relative;
     height: ${LOCAL.height};
