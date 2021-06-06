@@ -24,6 +24,7 @@ export const SearchBarStyles = styled.div`
             height: ${props => props.height};
             background: none;
             margin-right: auto;
+            flex: 1 1 100%;
 
             &:focus{
                 border: none;
@@ -34,10 +35,21 @@ export const SearchBarStyles = styled.div`
         button{
             background: #303030;
             border-radius: 50%;
-            width: ${props => props.height};
+            flex: 0 0 ${props => props.height};
             height: ${props => props.height};
             border: none;
-            color: #CCC;
+            color: #FFF;
+            cursor: pointer;
         }
+    }
+
+    > span{
+        width: 100%;
+        max-width: 650px;
+        display: inline-block;
+        text-align: left;
+        font-size: 14px;
+        padding: 10px 0 0 25px;
+        color: red;
     }
 `;

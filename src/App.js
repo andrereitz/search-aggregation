@@ -6,21 +6,6 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { SearchBar, SearchResults } from './components';
 
 function App() {
-  console.log('env test', process.env.REACT_APP_SERPSTACK_API_KEY);
-  console.log('env test', process.env.REACT_APP_SERPHOUSE_API_KEY);
-  console.log(process.env.NODE_ENV);
-
-  const SEARCH_PARAMS = {
-    "q": "test",
-    "domain": "google.com",
-    "lang": "en",
-    "device": "desktop",
-    "serp_type": "web",
-    "loc": "Alba,Texas,United States",
-    "verbatim": "0",
-    "page": "1",
-    "api_token": process.env.REACT_APP_SERPHOUSE_API_KEY,
-  }
   function testCall(){
     const url = new URL("https://api.serphouse.com/serp/live");
 

@@ -8,6 +8,8 @@ export const SearchOptionsStyles = styled.div`
     font-size: 12px;
     position: relative;
     height: ${LOCAL.height};
+    flex: 1 1 100px;
+    white-space: nowrap;
 
     > span{
         height: ${LOCAL.height};

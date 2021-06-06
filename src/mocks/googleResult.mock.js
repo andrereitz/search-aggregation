@@ -532,7 +532,7 @@ export const MOCK = {
 					"link": "https://www.cnn.com/2021/06/04/entertainment/mission-impossible-covid-trnd/index.html",
 					"displayed_link": "https://www.cnn.com › 2021/06/04 › entertainment › miss... ",
 					"cached_page": "",
-					"snippet": " "We have temporarily halted production on Mission: Impossible 7 until June 14th, due to positive coronavirus test results during routine testing," ... ",
+					"snippet": "We have temporarily halted production on Mission: Impossible 7 until June 14th, due to positive coronavirus test results during routine testing",
 					"date": "1 day ago — "
 				},
 				{

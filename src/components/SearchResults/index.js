@@ -12,7 +12,6 @@ export function SearchResults(){
 
     useEffect(() => {
         console.log('results changed',results);
-
     }, [results])
 
     return(
@@ -23,9 +22,11 @@ export function SearchResults(){
                         <div>
                             <h2>Search results for: { query }</h2>
                             <h3>Results from { service.title }</h3>
-                            {results.map( (result, index) => 
-                                <span>{result.title}: {index}</span>
-                            )}
+                            <ul>
+                                {results.map( (result, index) => 
+                                    <li>{result.title}: {index}</li>
+                                )}
+                            </ul>
                         </div>
                     :
 

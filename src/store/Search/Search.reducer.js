@@ -5,8 +5,6 @@ const INITIAL_STATE = {
 }
 
 export default function searchReducer(state = INITIAL_STATE, action){
-    console.log(action);
-
     switch(action.type){
         case 'CHANGE_SERVICE':
             return { ...state, service: action.payload, results: [], query: null };
