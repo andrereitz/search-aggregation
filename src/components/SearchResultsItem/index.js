@@ -9,7 +9,7 @@ export function SearchResultsItem(props){
         <SearchResultsItemStyles>
             <a href={result.link}>{ result.title }</a>
             <span>{ result.displayed_link }</span>
-            <p>{ result.snippet }</p>
+            <p dangerouslySetInnerHTML={ {__html: result.snippet} }></p>
         </SearchResultsItemStyles>
     )
 }
