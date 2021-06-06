@@ -30,7 +30,7 @@ export function SearchOptions(props){
             <ul>
                 { services.map( (serv) => {
                     return(
-                        <li onClick={ () => handleChangeService(serv) }>{serv.title}</li>
+                        <li key={`search-option-${serv.title}`} onClick={ () => handleChangeService(serv) }>{serv.title}</li>
                     )
                 }) }
             </ul>
