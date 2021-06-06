@@ -7,7 +7,7 @@ const process = jest.fn(() => {
 
 describe('action/changeSearch', () => {
     it('should create an action to change service', () => {
-        const payload =     {
+        const payload = {
             title: 'Google',
             url: 'google.com'
         }

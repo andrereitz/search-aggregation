@@ -1,4 +1,4 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
@@ -7,10 +7,6 @@ import { Provider } from 'react-redux';
 import { SEARCH_SERVICES } from '../../config/searchServices';
 
 import { SearchOptions } from './';
-
-afterEach(() => {
-    cleanup();
-})
 
 test('component/SearchOptions - Render', () => {
     const mockStore = configureMockStore([thunk]);

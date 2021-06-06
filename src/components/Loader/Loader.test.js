@@ -1,10 +1,6 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import { Loader } from './';
-
-afterEach(() => {
-    cleanup();
-})
 
 test('component/Loader - Render', () => {
     render(<Loader />)

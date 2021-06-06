@@ -1,4 +1,4 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import { GoogleMock }  from '../../mocks';
 import configureMockStore from 'redux-mock-store';
@@ -6,10 +6,6 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 
 import { SearchResults } from './';
-
-afterEach(() => {
-    cleanup();
-})
 
 const process = jest.fn(() => {
     return GoogleMock.results.results.organic.slice(0, 10)
