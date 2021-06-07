@@ -7,10 +7,6 @@ import { Provider } from 'react-redux';
 
 import { SearchResults } from './';
 
-const process = jest.fn(() => {
-    return GoogleMock.results.results.organic.slice(0, 10)
-})
-
 test('component/SearchResults - Render', () => {
     const mockStore = configureMockStore([thunk]);
     const store = mockStore({
