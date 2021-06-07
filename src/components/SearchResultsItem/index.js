@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { SearchResultsItemStyles } from './searchresultsitem.styles';
 
 export function SearchResultsItem(props){
@@ -11,3 +12,7 @@ export function SearchResultsItem(props){
         </SearchResultsItemStyles>
     )
 }
+
+SearchResultsItem.propTypes = {
+    result: PropTypes.object
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { SearchOptionsStyles } from './searchoptions.styles';
 
 import { useState } from 'react';
@@ -37,3 +38,7 @@ export function SearchOptions(props){
         </SearchOptionsStyles>
     )
 }
+
+SearchOptions.propTypes = {
+    services: PropTypes.array
+};

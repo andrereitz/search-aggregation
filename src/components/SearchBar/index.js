@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { SEARCH_SERVICES } from '../../config/searchServices';
 import { SearchBarStyles } from './searchbar.styles';
 
@@ -19,7 +20,7 @@ export function SearchBar(props){
     const [error, setError] = useState(null);
     const queryRef = useRef(null);
 
-    function handleSearch(){
+    function _handleSearch(){
         const query = queryRef.current.value;
         if(!query) return setError({ msg: 'Please inform a search term' });
         if(searchLoading) return;
@@ -31,7 +32,7 @@ export function SearchBar(props){
 
     useEffect(() => {
         function handleSearchEnter(e){
-            if(e.key === 'Enter') return handleSearch();
+            if(e.key === 'Enter') return _handleSearch();
         }
 
         window.addEventListener('keypress', handleSearchEnter);
@@ -46,7 +47,7 @@ export function SearchBar(props){
             <div>
                 <input ref={queryRef} type="text" placeholder="Type your search" />
                 <SearchOptions services={SEARCH_SERVICES} />
-                <button onClick={ () => handleSearch() }>
+                <button onClick={ _handleSearch }>
                     { 
                         searchLoading ?
                             <Loader size='20px' /> 
@@ -61,3 +62,7 @@ export function SearchBar(props){
         </SearchBarStyles>
     )
 }
+
+SearchBar.propTypes = {
+    height: PropTypes.string
+};
