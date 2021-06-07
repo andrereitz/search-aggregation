@@ -6,7 +6,7 @@ export const SearchResultsItemStyles = styled.li.attrs( props => ({
     list-style: none;
     margin: 15px 0;
 
-    a{
+    a {
         margin: 0;
         color: #404040;
         font-size: 18px;
@@ -14,11 +14,11 @@ export const SearchResultsItemStyles = styled.li.attrs( props => ({
         width: 100%;
         display: block;
     }
-    span{
+    span {
         font-size: 12px;
         color: #606060; 
     }
-    p{
+    p {
         margin: 5px 0 0 0;
         font-size: 14px;
     }

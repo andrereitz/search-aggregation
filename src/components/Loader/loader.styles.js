@@ -8,12 +8,12 @@ export const LoaderStyles = styled.div.attrs(props => ({
     display: block;
     border-radius: 50%;
     
-    &:before{
+    &:before {
         width: 100%;
         height: 100%;
         display: block;
         content: '';
-        border: 3px solid ${props => props.color ?? '#FFF'};
+        border: 3px solid ${props => props.color ?? '#FFFFFF'};
         border-top-color: transparent;
         border-radius: 50%;
         box-sizing: border-box;

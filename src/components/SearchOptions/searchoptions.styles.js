@@ -13,7 +13,7 @@ export const SearchOptionsStyles = styled.div.attrs(props => ({
     flex: 1 1 100px;
     white-space: nowrap;
 
-    > span{
+    > span {
         height: ${LOCAL.height};
         line-height: ${LOCAL.height};
         display: block;
@@ -25,7 +25,7 @@ export const SearchOptionsStyles = styled.div.attrs(props => ({
         }
     }
 
-    ul{
+    ul {
         list-style: none;
         padding: 0;
         background: #F0F0F0;
@@ -40,7 +40,7 @@ export const SearchOptionsStyles = styled.div.attrs(props => ({
         }
     }
 
-    ${props => props.active && `{
+    ${props => props.active && ` {
         ul{
             display: block;
             z-index: 1;

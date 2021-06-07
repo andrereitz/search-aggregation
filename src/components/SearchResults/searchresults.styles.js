@@ -6,7 +6,7 @@ export const SearchResultsStyles = styled.div.attrs( props => ({
     background: #FAFAFA;
     text-align: center;
 
-    > div{
+    > div {
         text-align: left;
         width: 100%;
         max-width: 980px;
@@ -14,17 +14,17 @@ export const SearchResultsStyles = styled.div.attrs( props => ({
         padding: 25px 15px;
         display: inline-block;
 
-        h2{
+        h2 {
             color: #252525;
             margin: 0 0 10px 0;
         }
 
-        h3{
+        h3 {
             margin: 0 0 25px 0;
             color: #454545;
         }
 
-        ul{
+        ul {
             margin:0;
             padding: 0;
         }

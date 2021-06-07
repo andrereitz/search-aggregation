@@ -9,7 +9,7 @@ export const SearchBarStyles = styled.div.attrs(props => ({
     padding: 40px 20px 30px;
     box-sizing: border-box;
 
-    > div{
+    > div {
         width: 100%;
         max-width: 650px;
         display: inline-flex;
@@ -18,10 +18,10 @@ export const SearchBarStyles = styled.div.attrs(props => ({
         flex-flow: row nowrap;
         border: 1px solid #909090;
         border-radius: 1000px;
-        background: #FFF;
+        background: #FFFFFF;
         position: relative;
 
-        input{
+        input {
             border: none;
             padding: 0 15px;
             height: ${props => props.height};
@@ -35,20 +35,20 @@ export const SearchBarStyles = styled.div.attrs(props => ({
             }
         }
 
-        button{
+        button {
             background: #303030;
             border-radius: 50%;
             flex: 0 0 ${props => props.height};
             height: ${props => props.height};
             border: none;
-            color: #FFF;
+            color: #FFFFFF;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         
-        > span{
+        > span {
             width: 100%;
             max-width: 950px;
             display: inline-block;
