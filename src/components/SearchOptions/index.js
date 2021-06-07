@@ -15,9 +15,14 @@ export function SearchOptions(props){
 
     const [active, setActive] = useState(false);
 
-    function handleChangeService(service){
+    function _handleChangeService(e){
+        const payload = {
+            title: e.currentTarget.getAttribute('data-title'),
+            url: e.currentTarget.getAttribute('data-url'),
+        }
+
         setActive(false)
-        dispatch(changeSearch(service))
+        dispatch(changeSearch(payload))
     }
 
     return(
@@ -31,7 +36,7 @@ export function SearchOptions(props){
             <ul>
                 { services.map( (serv) => {
                     return(
-                        <li key={`search-option-${serv.title}`} onClick={ () => handleChangeService(serv) }>{serv.title}</li>
+                        <li key={`search-option-${serv.title}`} data-title={serv.title} data-url={serv.url} onClick={ _handleChangeService }>{serv.title}</li>
                     )
                 }) }
             </ul>

@@ -2,7 +2,7 @@ import process from 'process';
 import { BingMock, GoogleMock }  from '../../mocks';
 import { updateResults } from './Search.actions';
 
-const USE_MOCK = true;
+const USE_MOCK = false;
 
 export const fetchResults = (query) => async (dispatch, getState) => {
     const service = getState().search.service;
