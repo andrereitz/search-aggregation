@@ -13,3 +13,7 @@ export const selectSearchQuery = (state) => {
 export const selectSearchLoading = (state) => {
     return state.search.loading;
 }
+
+export const selectSearchError = (state) => {
+    return state.search.error;
+}

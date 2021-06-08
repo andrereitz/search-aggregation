@@ -1,6 +1,5 @@
-import process from 'process';
 import { BingMock, GoogleMock }  from '../../mocks';
-import { updateResults } from './Search.actions';
+import { updateResults, setError } from './Search.actions';
 
 const USE_MOCK = false;
 
@@ -29,12 +28,16 @@ export const fetchResults = (query) => async (dispatch, getState) => {
 
                     if(search1.status === 'success' && search2.status === 'success'){
                         payload.results = __processResponse(search1).concat(__processResponse(search2));
-                    }
 
-                    dispatch(updateResults(payload));
-    
+                        dispatch(updateResults(payload));
+                    }else{
+                        dispatch(setError(true));
+                    }    
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    console.log(err);
+                    dispatch(updateResults(payload));
+                })
         }
 
     }else{
@@ -48,9 +51,14 @@ export const fetchResults = (query) => async (dispatch, getState) => {
                         payload.results = __processResponse(res);
 
                         dispatch(updateResults(payload));
+                    }else{
+                        dispatch(setError(true));
                     }
                 })
-                .catch(err => console.log(err))
+                .catch(err =>{
+                    console.log(err);
+                    dispatch(setError(true));
+                })
         }
     }
 

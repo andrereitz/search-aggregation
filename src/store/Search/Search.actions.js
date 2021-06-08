@@ -18,3 +18,10 @@ export function setLoading(loading){
         payload: loading
     }
 }
+
+export function setError(payload){
+    return{
+        type: 'SET_ERROR',
+        payload: payload
+    }
+}
