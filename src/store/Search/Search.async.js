@@ -5,7 +5,8 @@ const USE_MOCK = false;
 
 export const fetchResults = (query) => async (dispatch, getState) => {
     const service = getState().search.service;
-    const serviceUrl = getState().search.service.url;
+    let serviceUrl = getState().search.service.url;
+    serviceUrl = serviceUrl.split(',');
 
     const payload = {
         query: (USE_MOCK ? 'test' : query),
@@ -14,13 +15,13 @@ export const fetchResults = (query) => async (dispatch, getState) => {
 
     const headers = { method: 'GET', headers: { "Accept": "application/json", "Content-Type": "application/json" } };
 
-    if(typeof serviceUrl === 'object'){
+    if(serviceUrl.length > 1){
         if(USE_MOCK){
             payload.results = await __getMock(service);
         }else{
             await Promise.all([
-                fetch(__contructURL(service.url[0], query), headers),
-                fetch(__contructURL(service.url[1], query), headers)
+                fetch(__contructURL(serviceUrl[0], query), headers),
+                fetch(__contructURL(serviceUrl[1], query), headers)
             ])
                 .then(async ([res1, res2]) => {
                     const search1 = await res1.json();
@@ -44,7 +45,7 @@ export const fetchResults = (query) => async (dispatch, getState) => {
         if(USE_MOCK){
             payload.results = await __getMock(service);
         }else{
-            payload.results = await fetch(__contructURL(service.url, query), headers)
+            payload.results = await fetch(__contructURL(serviceUrl[0], query), headers)
                 .then(res => res.json())
                 .then(res => {
                     if(res.status === 'success'){
@@ -94,13 +95,13 @@ function __processResponse(data){
     return result;
 }
 
-function __contructURL(serviceUrl, query){
+function __contructURL(servUrl, query){
     const url = new URL("https://api.serphouse.com/serp/live");
 
     const SEARCH_PARAMS = {
         "q": query,
-        "domain": serviceUrl,
-        "lang": (serviceUrl === 'google.com' ? "en" : "en-US"),
+        "domain": servUrl,
+        "lang": (servUrl === 'google.com' ? "en" : "en-US"),
         "device": "desktop",
         "serp_type": "web",
         "loc": "Alba,Texas,United States",
